@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #3</title>
+</head>
+<body>
+    <script>
+        //Exercise #3
+//Objective: Implement Closures in JavaScript.
+//Develop a JavaScript function that returns another function.
+//The inner function should have access to variables from the outer function's scope.
+        function createPerson(name) {
+            let age = 0;
+          
+            return {
+              getName: () => name,
+              celebrateBirthday: () => {
+                age++;
+                console.log(`${name} is now ${age} years old!`);
+              },
+            };
+          }
+          
+          const person1 = createPerson("Alice");
+          const person2 = createPerson("Bob");
+          
+          console.log(person1.getName()); 
+          person1.celebrateBirthday(); 
+          
+          console.log(person2.getName()); 
+          person2.celebrateBirthday(); 
+          
+    </script>
+</body>
+</html>

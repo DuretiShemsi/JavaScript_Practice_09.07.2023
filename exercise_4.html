@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #4</title>
+</head>
+<body>
+    <script>
+        //Exercise #4
+//Objective: Understand the differences between Local and Global Scope.
+//Declare a global variable outside of any function.
+//Create a function that tries to modify that global variable.
+//Create another function that declares a local variable with the same name.
+//Observe the behavior when calling both functions.
+
+let favoriteFood = 'Sushi'; 
+
+function modifyGlobalVariable() {
+  favoriteFood = 'Alfredo Pasta'; 
+}
+
+function declareLocalVariable() {
+  let favoriteFood = 'Pizza'; 
+  console.log('Inside declareLocalVariable:', favoriteFood);
+}
+
+console.log('Before calling any function:', favoriteFood);
+
+modifyGlobalVariable(); 
+console.log('After calling modifyGlobalVariable:', favoriteFood); 
+
+declareLocalVariable(); 
+console.log('After calling declareLocalVariable:', favoriteFood); 
+
+    </script>
+    
+</body>
+</html>

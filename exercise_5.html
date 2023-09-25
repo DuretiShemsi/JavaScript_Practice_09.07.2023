@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #5 </title>
+</head>
+<body>
+    <script>
+        //Exercise #5
+//Objective: Implement a Function Factory using Closures.
+//Design a function that accepts a parameter.
+//The function should return another function that uses the parameter in some way.
+
+function createRectangle(length, width) {
+    
+    return function () {
+      return length * width;
+    };
+  }
+  
+  const calculateArea = createRectangle(5, 4);
+  
+  const area = calculateArea(); 
+  
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #1 & #2</title>
+</head>
+<body>
+    <script>
+//Excercise 1
+//Given the code snippet. Explain what scopes are in this current context of the code.
+function outerFunction() {
+	let outerVar = "I'm outside!";
+
+	function innerFunction() {
+		let innerVar = "I'm inside!";
+		console.log(outerVar); // Can we access outerVar?
+		console.log(innerVar); // Can we access innerVar?
+	}
+
+	innerFunction();
+}
+
+outerFunction();
+
+//outerVar is declared in outerFunction and can be accessed by both outerFunction and innerFunction.
+//innerVar is declared in innerFunction and can only be accessed within innerFunction.
+
+
+//Excercise 2
+
+//Objective: Apply Hoisting Correctly in a JS Project.
+//Draft a JavaScript function where you call a function before its declaration.
+//Analyze the behavior and understand how hoisting impacts the outcome.
+let firstVar = "I'm the first variable!";
+let secondVar = "I'm the second variable!";
+
+
+function myFunction() {
+  console.log('Inside myFunction:');
+  console.log('firstVar:', firstVar); 
+  console.log('secondVar:', secondVar); 
+  console.log('thirdVar:', thirdVar);
+}
+
+myFunction(); 
+
+let thirdVar = "I'm the third variable!";
+
+
+    </script>
+</body>
+</html>
